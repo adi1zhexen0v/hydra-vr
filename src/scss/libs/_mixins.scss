@@ -6,9 +6,20 @@
   align-items: $ai;
 }
 
-@mixin text ($size: 20px, $lineHeight: 35px, $weight: 400, $color: black) {
+@mixin text ($size: 20px, $line-height: 35px, $weight: 400, $color: black) {
   font-size: $size;
-  line-height: $lineHeight;
+  line-height: $line-height;
   font-weight: $weight;
   color: $color;
+}
+
+@mixin btn($color: white, $border-color: white, $background: none) {
+  text-transform: uppercase;
+  padding: 20px 48px;
+  border-radius: 50px;
+  border: 2px solid $border-color;
+  background: $background;
+  cursor: pointer;
+
+  @include text(16px, 20px, 700, $color);
 }

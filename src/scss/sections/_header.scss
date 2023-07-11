@@ -1,0 +1,121 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.nav {
+  padding-top: 60px;
+  @include flex();
+
+  &-part {
+    &:last-child {
+      @include flex(flex-end, center);
+      gap: 50px;
+    }
+  }
+
+  &-logo {
+    &__img {
+      width: 240px;
+    }
+  }
+
+  &-links {
+    @include flex();
+    gap: 54px;
+
+    &__item {
+      a {
+        position: relative;
+        @include text(16px, 20px, 700, white);
+        text-transform: uppercase;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 2px;
+          background-color: white;
+          transform-origin: left;
+          transition: width 0.4s ease;
+        }
+    
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-btn {
+    position: relative;
+    z-index: 1;
+
+    &:first-child {
+      @include btn();
+    }
+
+    &:last-child {
+      @include btn($deep-ink, $block-gradient, $block-gradient);
+    }
+  }
+}
+
+.home {
+  position: relative;
+  padding: 120px 0;
+  @include flex();
+  
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-illustration {
+    &__outter {
+      @include flex(center, center);
+      background-color: rgba(black, 0.13);
+      padding: 15px;
+      border-radius: 140px 140px 140px 320px;
+    }
+    &__inner {
+      border-radius: 140px 140px 140px 320px;
+      width: 640px;
+    }
+  }
+
+  &-title {
+    @include text(60px, 75px, 700, white);
+    margin-bottom: 48px;
+
+    span {
+      background-image: $text-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &-text {
+    @include text(21px, 30px, 300, white);
+    max-width: 600px;
+    margin-bottom: 80px;
+  }
+
+  &-link {
+    @include flex(flex-start, center);
+    gap: 50px;
+  }
+
+  &-btn {
+    @include btn($deep-ink, $block-gradient, $block-gradient);
+  }
+  
+  &-bg {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 0;
+    height: 120vh;
+  }
+}

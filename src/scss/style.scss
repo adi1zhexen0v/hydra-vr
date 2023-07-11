@@ -3,3 +3,10 @@
 @import 'libs/reset';
 
 @import 'sections/all';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 6%;
+  overflow-x: hidden;
+  background: $midnight-blue;
+}
