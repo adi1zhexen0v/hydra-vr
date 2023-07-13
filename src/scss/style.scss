@@ -33,3 +33,49 @@ body {
 section {
   margin-bottom: 120px;
 }
+
+.btn {
+  @include btn($deep-ink, $btn-gradient, $btn-gradient);
+}
+
+.paragraph {
+  @include text(21px, 30px, 300, white);
+}
+
+.section {
+  &-header {
+    @include flex();
+
+    &__title {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+
+      &-secondary {
+        @include flex(flex-start, center);
+        gap: 40px;
+
+        img {
+          width: 240px;
+        }
+      }
+    }
+
+    &__text {
+      @include text(21px, 30px, 300, white);
+      max-width: 55%;
+    }
+  }
+
+  &-title {
+    &__main {
+      @include text(44px, 54px, 700, white);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    &__sub {
+      @include text(44px, 54px, 300, white);
+      text-transform: uppercase;
+    }
+  }
+}

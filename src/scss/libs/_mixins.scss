@@ -14,12 +14,18 @@
 }
 
 @mixin btn($color: white, $border-color: white, $background: none) {
+  display: inline-block;
   text-transform: uppercase;
-  padding: 20px 48px;
   border-radius: 50px;
   border: 2px solid $border-color;
   background: $background;
   cursor: pointer;
 
   @include text(16px, 20px, 700, $color);
+
+  @if $background == none {
+    padding: 20px 48px;
+  } @else {
+    padding: 22px 48px;
+  }
 }
