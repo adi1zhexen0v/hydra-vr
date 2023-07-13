@@ -1,0 +1,41 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.contact {
+  position: relative;
+  z-index: 1;
+  padding: 32px 54px;
+  background: $block-gradient;
+  box-shadow: 0px 4px 4px 0px $midnight-prune;
+  border-radius: 120px;
+
+  &-list {
+    @include flex();
+  }
+
+  &-item {
+    @include flex(flex-start, center);
+    gap: 30px;
+
+    i {
+      font-size: 84px;
+      color: $pastel-lilac;
+    }
+
+    &__content {
+      &-title {
+        @include text(30px, 40px, 700, white);
+        margin-bottom: 10px;
+      }
+      &-text {
+        @include text(17px, 24px, 400, white);
+      }
+    }
+  }
+
+  &-separate {
+    width: 1px;
+    height: 136px;
+    background: rgba($pastel-lilac, 0.33);
+  }
+}

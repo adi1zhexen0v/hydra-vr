@@ -4,9 +4,32 @@
 
 @import 'sections/all';
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: $midnight-blue;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $lavender-purple;
+  border-radius: 10px;
+  border: 3px solid $midnight-blue;
+}
+
+::selection {
+  background-color: $lavender-purple;
+  color: #fff;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0 6%;
   overflow-x: hidden;
   background: $midnight-blue;
+}
+
+section {
+  margin-bottom: 120px;
 }
