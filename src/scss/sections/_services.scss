@@ -74,4 +74,12 @@
       }
     }
   }
+
+  &-bg {
+    width: 100vw;
+    position: absolute;
+    bottom: -100%;
+    left: -6%;
+    z-index: 1;
+  }
 }
