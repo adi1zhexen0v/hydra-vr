@@ -29,3 +29,13 @@ export const imageminOptions = [
     ]
   })
 ];
+
+export const terserOptions = {
+  ecma: 6,
+  compress: {
+    drop_console: true 
+  },
+  output: {
+    quote_style: 1 
+  }
+}

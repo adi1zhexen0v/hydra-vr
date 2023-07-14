@@ -28,4 +28,24 @@
   } @else {
     padding: 22px 48px;
   }
+  
+  @media screen and (max-width: 1600px) {
+    border-radius: 40px;
+    font-size: 12px;
+    line-height: 15px;
+
+    @if $background == none {
+      padding: 16px 36px;
+    } @else {
+      padding: 18px 36px;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    @if $background == none {
+      padding: 16px 64px;
+    } @else {
+      padding: 18px 64px;
+    }
+  }
 }

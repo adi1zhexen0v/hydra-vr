@@ -6,9 +6,11 @@ import htmlmin from 'gulp-htmlmin';
 import inliner from 'gulp-inline-source';
 import imagemin from 'gulp-imagemin';
 import rename from 'gulp-rename';
+import concat from 'gulp-concat';
+import terser from 'gulp-terser';
 import * as dartSass from 'sass';
 
-import { paths, imageminOptions } from './config.js';
+import { paths, imageminOptions, terserOptions } from './config.js';
 
 const sass = gulpSass(dartSass);
 
@@ -40,11 +42,20 @@ const optimizeImages = () => {
     .pipe(gulp.dest(paths.build.img));
 }
 
+const concatJs = () => {
+  return gulp
+    .src(paths.src.js)
+    .pipe(concat('script.js'))
+    .pipe(terser(terserOptions))
+    .pipe(gulp.dest(paths.build.js));
+}
+
 const watch = () => {
   gulp.watch(paths.src.html, minifyHtml);
   gulp.watch(paths.src.scss, compileStyles);
   gulp.watch(paths.src.img, optimizeImages);
+  gulp.watch(paths.src.js, concatJs);
 }
 
-gulp.task('build', gulp.parallel(compileStyles, minifyHtml, optimizeImages));
+gulp.task('build', gulp.parallel(compileStyles, minifyHtml, optimizeImages, concatJs));
 gulp.task('watch', watch);
