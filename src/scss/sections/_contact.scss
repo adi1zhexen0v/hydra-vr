@@ -4,10 +4,13 @@
 .contact {
   position: relative;
   z-index: 1;
-  padding: 32px 54px;
-  background: $contact-gradient;
-  box-shadow: 0px 4px 4px 0px $midnight-prune;
-  border-radius: 120px;
+
+  &-body {
+    padding: 32px 54px;
+    background: $contact-gradient;
+    box-shadow: 0px 4px 4px 0px $midnight-prune;
+    border-radius: 120px;
+  }
 
   &-list {
     @include flex();
