@@ -1,0 +1,61 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.join {
+  &-form {
+    padding: 100px 120px;
+    background: $service-gradient;
+    box-shadow: 0px 4px 4px 0px rgba(black, 0.25);
+    border-radius: 120px;
+  }
+
+  &-title {
+    @include flex(center, center);
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    &__line {
+      width: 540px;
+      height: 1.5px;
+      background: $line-gradient;
+      margin: 20px 0;
+    }
+  }
+
+  &-fields {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 40px 30px;
+
+      textarea {
+        height: 260px;
+        resize: none;
+      }
+    }
+
+    &__input {
+      background: none;
+      padding: 30px 48px;
+      border: 2px solid white;
+      border-radius: 60px;
+      outline: none;
+      @include text(17px, 24px, 300, white);
+
+      &::placeholder {
+        color: rgba(white, 0.6);
+      }
+
+      &:nth-child(5),
+      &:last-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
+
+    &__submit {
+      @include flex(center, center);
+      margin-top: 40px;
+    }
+  }
+}
