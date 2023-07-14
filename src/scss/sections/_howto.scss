@@ -1,0 +1,64 @@
+@import '../libs/variables';
+@import '../libs/mixins';
+
+.howto {
+  &-steps {
+    position: relative;
+    &__list {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+      &-number {
+        @include flex(center, center);
+        margin-bottom: 30px;
+
+        &-outer {
+          padding: 27px;
+          border-radius: 100%;
+          background: rgba($midnight-prune, 0.4);
+
+          @include flex(center, center);
+        }
+
+        &-inner {
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          background: $step-gradient;
+          @include text(88px, 100px, 700, $deep-ink);
+
+          @include flex(center, center);
+        }
+      }
+
+      &-name {
+        @include flex(center, flex-start);
+        gap: 20px;
+
+        i {
+          font-size: 32px;
+          color: $pastel-lilac;
+          margin-top: 6px;
+        }
+
+        &-title {
+          @include text(28px, 40px, 700, white);
+        }
+      }
+    }
+
+    &__bg {
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: -6%;
+      z-index: 1;
+    }
+  }
+
+  
+}

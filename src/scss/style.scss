@@ -45,6 +45,7 @@ section {
 .section {
   &-header {
     @include flex();
+    margin-bottom: 120px;
 
     &__title {
       @include flex(flex-start, flex-start);

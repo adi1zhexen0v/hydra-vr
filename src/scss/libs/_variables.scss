@@ -6,7 +6,9 @@ $midnight-prune: #211E2E;
 $royal-indigo: #433D60;
 
 $btn-gradient: linear-gradient(90deg, $lavender-purple 0%, $pastel-lilac 100%);
-$text-gradient: linear-gradient(91.57deg, #C0B7E8 -1.02%, #8176AF 36.25%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
-$contact-gradient: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+$text-gradient: linear-gradient(91.57deg, $pastel-lilac -1.02%, $lavender-purple 36.25%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+$contact-gradient: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, $midnight-prune 100%);
 $service-gradient: radial-gradient(50% 50% at 50% 50%, $royal-indigo 0%, $midnight-prune 100%);
+$step-gradient: linear-gradient(251.27deg, $pastel-lilac 12.87%, $lavender-purple 89.33%);
+
 
