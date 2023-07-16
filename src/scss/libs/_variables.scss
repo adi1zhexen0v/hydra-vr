@@ -1,3 +1,4 @@
+// Colors
 $midnight-blue: #302C42;
 $lavender-purple: #8176AF;
 $pastel-lilac: #C0B7E8;
@@ -5,6 +6,7 @@ $deep-ink: #3A3456;
 $midnight-prune: #211E2E;
 $royal-indigo: #433D60;
 
+// Gradients
 $btn-gradient: linear-gradient(90deg, $lavender-purple 0%, $pastel-lilac 100%);
 $text-gradient: linear-gradient(91.57deg, $pastel-lilac -1.02%, $lavender-purple 36.25%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
 $contact-gradient: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, $midnight-prune 100%);
