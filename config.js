@@ -7,7 +7,7 @@ export const paths = {
   src: {
     html: './src/*.html',
     scss: './src/scss/**/*.scss',
-    js: './src/js/*.js',
+    js: './src/js/main.js',
     img: './src/img/**/*'
   },
   build: {
@@ -30,12 +30,29 @@ export const imageminOptions = [
   })
 ];
 
-export const terserOptions = {
-  ecma: 6,
-  compress: {
-    drop_console: true 
-  },
+export const webpackOptions = {
+  mode: 'development',
   output: {
-    quote_style: 1 
+    filename: 'script.js'
+  },
+  watch: false,
+  devtool: "source-map",
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', {
+              debug: true,
+              corejs: 3,
+              useBuiltIns: "usage"
+            }]]
+          }
+        }
+      }
+    ]
   }
 }

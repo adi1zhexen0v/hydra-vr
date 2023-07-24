@@ -6,11 +6,10 @@ import htmlmin from 'gulp-htmlmin';
 import inliner from 'gulp-inline-source';
 import imagemin from 'gulp-imagemin';
 import rename from 'gulp-rename';
-import concat from 'gulp-concat';
-import terser from 'gulp-terser';
+import webpack from 'webpack-stream';
 import * as dartSass from 'sass';
 
-import { paths, imageminOptions, terserOptions } from './config.js';
+import { paths, imageminOptions, webpackOptions } from './config.js';
 
 const sass = gulpSass(dartSass);
 
@@ -45,8 +44,7 @@ const optimizeImages = () => {
 const concatJs = () => {
   return gulp
     .src(paths.src.js)
-    .pipe(concat('script.js'))
-    .pipe(terser(terserOptions))
+    .pipe(webpack(webpackOptions))
     .pipe(gulp.dest(paths.build.js));
 }
 
