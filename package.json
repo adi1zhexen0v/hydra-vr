@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prettier": "prettier --write ./src/js/**/*.js"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
+    "prettier": "^3.0.0",
     "sass": "^1.63.6",
     "webpack": "^5.88.2",
     "webpack-stream": "^7.0.0"

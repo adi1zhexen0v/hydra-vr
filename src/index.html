@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <script src="https://kit.fontawesome.com/c2a7e21e81.js" crossorigin="anonymous"></script>
   <script defer src="./js/script.js"></script>
+  <script defer src="./js/slider.js"></script>
   <title>Hydra - Dive Into The Depths Of Virtual Reality</title>
 </head>
 <body>
@@ -88,36 +89,50 @@
     <img src="./img/home/home-bg.png" alt="Задний фон главной страницы" class="home-bg">
   </header>
   <main>
-    <section class="contact" id="contact">
-      <div class="contact-body">
-        <div class="contact-list">
-          <div class="contact-item">
-            <i class="fa-sharp fa-solid fa-location-dot"></i>
-            <div class="contact-item__content">
-              <h4 class="contact-item__content-title">Pay Us a Visit</h4>
-              <p class="contact-item__content-text">Union St, Seattle, WA 98101, United States</p>
-            </div>
+    <section class="contact" id="contact">  
+      
+      <div class="contact-body">    
+        <div class="slider-btn slider-btn__left" id="contact-btn-left">
+          <div class="slider-btn__inner">
+            <i class="fa-solid fa-angle-left"></i>
           </div>
-          <div class="contact-separate"></div>
-          <div class="contact-item">
-            <i class="fa-sharp fa-solid fa-phone-volume"></i>
-            <div class="contact-item__content">
-              <h4 class="contact-item__content-title">Give Us a Call</h4>
-              <p class="contact-item__content-text">(110) 1111-1010</p>
+        </div> 
+        <div class="contact-container">
+          <div class="contact-list">
+            <div class="contact-item">
+              <i class="fa-sharp fa-solid fa-location-dot"></i>
+              <div class="contact-item__content">
+                <h4 class="contact-item__content-title">Pay Us a Visit</h4>
+                <p class="contact-item__content-text">Union St, Seattle, WA 98101, United States</p>
+              </div>
             </div>
-          </div>
-          <div class="contact-separate"></div>
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <div class="contact-item__content">
-              <h4 class="contact-item__content-title">Send Us a Message</h4>
-              <a href="mailto:contact@hydratech.com" class="contact-item__content-text">contact@hydratech.com</a>
+            <div class="contact-separate"></div>
+            <div class="contact-item">
+              <i class="fa-sharp fa-solid fa-phone-volume"></i>
+              <div class="contact-item__content">
+                <h4 class="contact-item__content-title">Give Us a Call</h4>
+                <p class="contact-item__content-text">(110) 1111-1010</p>
+              </div>
             </div>
+            <div class="contact-separate"></div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="contact-item__content">
+                <h4 class="contact-item__content-title">Send Us a Message</h4>
+                <a href="mailto:contact@hydratech.com" class="contact-item__content-text">contact@hydratech.com</a>
+              </div>
+            </div>
+          </div>     
+        </div> 
+        <div class="slider-btn slider-btn__right" id="contact-btn-right">
+          <div class="slider-btn__inner">
+            <i class="fa-solid fa-angle-right"></i>
           </div>
         </div>
-      </div>
+      </div> 
+      
     </section>
-
+<!-- 
     <section class="about" id="about">
       <div class="about-header section-header">
         <div class="about-header__title section-header__title">
@@ -357,10 +372,10 @@
           </div>
         </form>
       </div>
-    </section>
+    </section> -->
   </main>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="footer-top">
       <div class="footer-top__item">
         <img src="./img/favicon.png" alt="Логотип Hydra" class="footer-top__item-logo">
@@ -411,6 +426,6 @@
       <h6 class="footer-bottom__text">2023 &copy; Hydra Landing Page - by Zine. E. Falout - All Rights Reserved</h6>
     </div>
     <img src="./img/footer/footer-bg.png" alt="Фон для футера" class="footer-bg">
-  </footer>
+  </footer> -->
 </body>
 </html>

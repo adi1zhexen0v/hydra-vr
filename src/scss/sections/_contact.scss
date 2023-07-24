@@ -6,6 +6,7 @@
   z-index: 1;
 
   &-body {
+    position: relative;
     padding: 32px 54px;
     background: $contact-gradient;
     box-shadow: 0px 4px 4px 0px $midnight-prune;
@@ -14,6 +15,7 @@
 
   &-list {
     @include flex();
+    transition: 0.5s ease;
   }
 
   &-item {
@@ -41,4 +43,104 @@
     height: 136px;
     background: rgba($pastel-lilac, 0.33);
   }
+}
+
+
+
+@media screen and (max-width: 1600px) {
+  .contact {
+    &-body {
+      padding: 24px 48px;
+    }
+
+    &-item {
+      gap: 24px;
+    
+      i {
+        font-size: 64px;
+      }
+
+      &__content {
+        &-title {
+          font-size: 24px;
+          line-height: 30px;
+        }
+        &-text {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .contact {
+    position: relative;
+    &-body {
+      padding: 48px;
+    }
+
+    &-container {
+      overflow: hidden;
+    }
+
+    &-list {
+      width: 150%;
+      @include flex(flex-start, center);
+      gap: 40px;
+    }
+
+    &-item {
+     width: 50%;
+     justify-content: flex-start;
+    }
+
+    &-separate {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    &-list {
+      width: 300%;
+      gap: 0;
+    }
+
+    &-item {
+     width: 100%;
+     justify-content: center;
+     padding-left: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .contact {
+    &-body {
+      padding: 20px 36px; 
+    }
+
+    &-item {
+      i {
+        font-size: 48px;
+      }
+
+      &__content {
+        &-title {
+          font-size: 20px;
+          line-height: 24px;
+          margin-bottom: 6px;
+        }
+        &-text {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+
 }
