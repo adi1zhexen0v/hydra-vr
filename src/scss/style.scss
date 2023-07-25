@@ -62,7 +62,6 @@ section {
     }
 
     &__text {
-      @include text(21px, 30px, 300, white);
       max-width: 55%;
     }
   }
@@ -83,6 +82,7 @@ section {
 
 .slider {
   &-btn {
+    display: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -123,6 +123,54 @@ section {
     font-size: 16px;
     line-height: 24px;
   }
+
+  .section {
+    &-header {
+      margin-bottom: 100px;
+  
+      &__title {
+        &-secondary {
+          gap: 30px;
+  
+          img {
+            width: 190px;
+          }
+        }
+      }
+    }
+  
+    &-title {
+      &__main {
+        font-size: 36px;
+        line-height: 44px;
+      }
+  
+      &__sub {
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .slider {
+    &-btn {
+      display: block;
+    }
+  }
+
+  .section {
+    &-header {
+      &__title {
+        &-secondary {  
+          img {
+            width: 140px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -134,11 +182,83 @@ section {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .section {
+    &-header {
+      margin-bottom: 80px;
+  
+      &__title {
+        &-secondary {
+          gap: 24px;
+  
+          img {
+            width: 100px;
+          }
+        }
+      }
+    }
+  
+    &-title {
+      &__main {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 0;
+      }
+  
+      &__sub {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
   section {
     padding-top: 60px;
+  }
+
+  .section {
+    &-header {
+      margin-bottom: 60px;
+      &__title {
+        &-secondary {  
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section{
+    &-header {
+      margin-bottom: 36px;
+      &__title {
+        width: 100%;
+
+        &-secondary {
+          width: 100%;
+        }
+      }
+      &__text {
+        display: none;
+      }
+    }
+
+    &-title {
+      &__main,
+      &__sub {
+        width: 100%;
+        text-align: center;
+      }
+
+      &__main {
+        margin-bottom: 12px;
+      }
+    }
   }
 }
 
