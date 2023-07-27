@@ -4,6 +4,12 @@
 
 @import 'sections/all';
 
+
+
+/*
+  Дообавить неактивный класс для кнопки слайд ера
+*/
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -95,6 +101,7 @@ section {
       height: 40px;
       border-radius: 100%;
       background: $slider-btn-gradient;
+      cursor: pointer;
 
       @include flex(center, center);
 
@@ -110,6 +117,10 @@ section {
 
     &__right {
       right: -32px;
+    }
+    
+    &__hide {
+      display: none !important;
     }
   }
 }
