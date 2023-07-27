@@ -30,4 +30,31 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 		]
 	});
+
+  slider({
+		sliderContainerSelector: '.services-list',
+		sliderBtnLeftSelector: '#services-btn-left',
+		sliderBtnRightSelector: '#services-btn-right',
+		sliderItemsSelector: '.services-item',
+		breakpoints: [
+			{
+				maxWidth: 1200,
+				minWidth: 960,
+				amountToShow: 3,
+				gap: 16
+			},
+			{
+				maxWidth: 960,
+				minWidth: 600,
+				amountToShow: 2,
+				gap: 14
+			},
+      {
+				maxWidth: 600,
+				minWidth: 0,
+				amountToShow: 1,
+				gap: 12
+			}
+		]
+	});
 });

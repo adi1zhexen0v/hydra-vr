@@ -14,18 +14,19 @@ const slider = ({
   let activeIndex = 0;
   const screenWidth = window.innerWidth;
   const breakpoint = breakpoints.find(({ maxWidth, minWidth }) =>
-    screenWidth <= maxWidth && screenWidth >= minWidth
+    screenWidth <= maxWidth && screenWidth > minWidth
   ) || { amountToShow: 0, gap: 0 };
   const { amountToShow, gap } = breakpoint;
 
   const updateSliderButtonsVisibility = () => {
     sliderBtnLeft.classList.toggle('slider-btn__hide', activeIndex === 0);
-    sliderBtnRight.classList.toggle('slider-btn__hide', activeIndex === sliderItems.length - 1);
+    sliderBtnRight.classList.toggle('slider-btn__hide', activeIndex === sliderItems.length - amountToShow);
   };
 
   const moveSlider = () => {
     const widthOfMove = activeIndex * parseInt(sliderItemWidth);
-    sliderContainer.style.transform = `translateX(-${activeIndex === 0 ? widthOfMove : widthOfMove + gap}px)`;
+    console.log(widthOfMove, gap);
+    sliderContainer.style.transform = `translateX(-${activeIndex === 0 ? widthOfMove : widthOfMove + (activeIndex * gap)}px)`;
     updateSliderButtonsVisibility();
   };
 

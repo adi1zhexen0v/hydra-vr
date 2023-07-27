@@ -92,6 +92,7 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
     padding: 12px;
     border-radius: 100%;
     background: rgba($midnight-prune, 0.4);
@@ -120,7 +121,8 @@ section {
     }
     
     &__hide {
-      display: none !important;
+      opacity: 0;
+      transition: 0.2s ease;
     }
   }
 }
