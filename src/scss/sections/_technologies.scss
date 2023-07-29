@@ -28,6 +28,7 @@
     }
 
     &__content {
+      width: 100%;
       position: absolute;
       z-index: 3;
       top: 50%;
@@ -39,7 +40,7 @@
     &__btn {
       position: absolute;
       z-index: 3;
-      bottom: -60px;
+      bottom: -16%;
       left: 50%;
       transform: translateX(-50%);
 
@@ -67,10 +68,17 @@
     }
   }
 
+  &-container {
+    overflow: hidden;
+  }
+
   &-list {
+    z-index: 5;
     margin-top: 120px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    transition: 0.5s ease;
   }
 
   &-item {
@@ -85,6 +93,81 @@
       img {
         width: 50%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .tech {
+    &-hardware {
+      border-radius: 200px;
+      &__btn {
+        bottom: -13%;
+
+        &-outer {
+          padding: 15px;
+        }
+
+        &-inner {
+          width: 60px;
+          height: 60px;
+          i {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    &-list {
+      margin-top: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tech {
+    &-list {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .tech {
+    &-hardware {
+      border-radius: 80px;
+      aspect-ratio: 3/1;
+
+      &__btn {
+        display: none;
+      }
+    }
+
+    &-list {
+      width: 200%;
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .tech {
+    &-hardware {
+      &__content {
+        &-title {
+          font-size: 16px !important;
+          line-height: 20px !important;
+        }
+
+        &-subtitle {
+          font-size: 20px !important;
+          line-height: 24px !important;
+        }
+      }
+    }
+
+    &-list {
+      width: 400%;
     }
   }
 }

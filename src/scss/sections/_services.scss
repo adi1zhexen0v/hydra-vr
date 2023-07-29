@@ -139,11 +139,12 @@
     &-list {
       width: 200%;
       grid-gap: 14px;
+      transition: 0.5s ease;
     }
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 600px) {
   .services {
     &-list {
       width: 400%;
