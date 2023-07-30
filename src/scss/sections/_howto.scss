@@ -9,6 +9,7 @@
       z-index: 2;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      transition: 0.5s ease;
     }
 
     &__item {
@@ -19,7 +20,7 @@
         &-outer {
           padding: 27px;
           border-radius: 100%;
-          background: rgba($midnight-prune, 0.4);
+          background: rgba($midnight-prune, 0.5);
 
           @include flex(center, center);
         }
@@ -58,7 +59,150 @@
       left: -6%;
       z-index: 1;
     }
-  }
 
+    &__btn {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .howto {
+    &-steps {  
+      &__item {
+        &-number {
+          margin-bottom: 24px;
   
+          &-outer {
+            padding: 20px;
+          }
+  
+          &-inner {
+            width: 160px;
+            height: 160px;
+            font-size: 64px;
+            line-height: 78px;
+          }
+        }
+  
+        &-name {
+          gap: 16px;
+  
+          i {
+            font-size: 26px;
+            margin-top: 4px;
+          }
+  
+          &-title {
+            font-size: 24px;
+            line-height: 34px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .howto {
+    &-steps {  
+      &__item {
+        &-number {
+          margin-bottom: 20px;
+  
+          &-outer {
+            padding: 12px;
+          }
+  
+          &-inner {
+            width: 120px;
+            height: 120px;
+            font-size: 48px;
+            line-height: 60px;
+          }
+        }
+  
+        &-name {
+          gap: 16px;
+  
+          i {
+            font-size: 20px;
+            margin-top: 2px;
+          }
+  
+          &-title {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .howto {
+    &-steps {  
+      &__container {
+        overflow: hidden;
+      }
+
+      &__list {
+        width: 200%;
+      }
+
+      &__item {
+        &-number {
+          margin-bottom: 24px;
+  
+          &-outer {
+            padding: 20px;
+          }
+  
+          &-inner {
+            width: 160px;
+            height: 160px;
+            font-size: 64px;
+            line-height: 78px;
+          }
+        }
+  
+        &-name {
+          gap: 16px;
+  
+          i {
+            font-size: 26px;
+            margin-top: 4px;
+          }
+  
+          &-title {
+            font-size: 24px;
+            line-height: 34px;
+          }
+        }
+      }
+
+      &__bg {
+        top: 15%;
+      }
+
+      &__btn {
+        display: block !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .howto {
+    &-steps {  
+      &__list {
+        width: 400%;
+      }
+
+      &__bg {
+        top: 15%;
+      }
+    }
+  }
 }

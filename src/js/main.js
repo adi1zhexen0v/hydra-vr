@@ -44,8 +44,20 @@ window.addEventListener('DOMContentLoaded', () => {
 		speed: 3000
 	};
 
+  const howtoListOptions = {
+		sliderContainerSelector: '.howto-steps__list',
+		sliderBtnLeftSelector: '#howto-btn-left',
+		sliderBtnRightSelector: '#howto-btn-right',
+		sliderItemsSelector: '.howto-steps__item',
+		breakpoints: [
+			{ maxWidth: 960, minWidth: 600, amountToShow: 2, gap: 0 },
+			{ maxWidth: 600, minWidth: 0, amountToShow: 1, gap: 0 }
+		]
+	};
+
 	mobileMenu(mobileMenuOptions);
 	interactiveSlider(contactListOptions);
 	interactiveSlider(servicesListOptions);
 	automatedSlider(techListOptions);
+  interactiveSlider(howtoListOptions);
 });

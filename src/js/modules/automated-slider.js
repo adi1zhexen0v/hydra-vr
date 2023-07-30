@@ -16,6 +16,8 @@ const automatedSlider = ({
 	) || { amountToShow: 0 };
 	const { amountToShow } = breakpoint;
 
+  const startWidth = breakpoints[0].maxWidth;
+
 	const moveSlider = () => {
 		activeIndex++;
 		if (activeIndex > sliderItems.length - amountToShow) {
@@ -29,7 +31,7 @@ const automatedSlider = ({
 		activeIndex = 0;
 	};
 
-	if (speed > 0) {
+	if (startWidth >= screenWidth && speed > 0) {
 		setInterval(moveSlider, speed);
 	}
 };
