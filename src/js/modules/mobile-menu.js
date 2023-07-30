@@ -17,7 +17,7 @@ const mobileMenu = ({ menuSelector, buttonsSelector, menuHideSelector }) => {
 
 	menuOpenButton.addEventListener('click', openMenu);
 	menuCloseButton.addEventListener('click', closeMenu);
-  
+
 	menuLinks.forEach(link => {
 		link.addEventListener('click', closeMenu);
 	});
